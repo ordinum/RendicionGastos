@@ -1,0 +1,64 @@
+﻿@model RGastos.Models.LoginModel
+
+@{
+    ViewBag.Title = "Iniciar sesión";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>CV.</h1>
+                <h2>Sistema de Gestión Customer Visits - Metso Minerals</h2>
+            </hgroup>
+            <p>
+                Para poder hacer uso del sistema <strong>debe iniciar sesión.</strong> Contáctese
+                con el Administrador para registrarse o asignar los roles correspondientes. Ante
+                cualquier consulta técnica por favor contáctese con <a title="Metso IT Service Desk" href="@Url.Action("Contact","Home")">Metso IT Service Desk.</a>
+            </p>
+        </div>
+    </section>
+}
+
+<div class="content-wrapper" id="login-fondo">
+
+    <div id="loginForm" class="sombra">
+        <h2>Bienvenido.</h2>    
+        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>Formulario de inicio de sesión</legend>
+                <ol>
+                <li>
+                    @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+            <li>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                </li>
+                </ol>
+                <input type="submit" value="Iniciar sesión" />
+                </fieldset>
+                <p>
+                @Html.ActionLink("Registrese", "Register") si no tiene ninguna cuenta.
+                </p>
+            }
+    </div>
+
+
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

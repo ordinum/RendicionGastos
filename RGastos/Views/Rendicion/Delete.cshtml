@@ -1,0 +1,61 @@
+﻿@model RGastos.Models.Rendicion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Rendicion</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gasto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gasto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Observacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Observacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Visita.Descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Visita.Descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserProfile.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserProfile.UserName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
