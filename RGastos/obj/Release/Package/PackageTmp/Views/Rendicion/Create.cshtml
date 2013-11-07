@@ -1,0 +1,137 @@
+﻿@model RGastos.Models.Rendicion
+
+@{
+    ViewBag.Title = "Ingresar Rendición";
+}
+
+
+
+@*<script type="text/javascript">
+    $(function () {        
+        $('#linkvisita').click(function () {
+            var VisitaID = 1; // can be a value from a txtbox            
+            var valor = $('#linkVisita').val();
+            var url = '/Rendicion/Employee?visitaId=' + VisitaID;
+            $.ajax({
+                url: url,
+                type: 'GET',                
+                success: function (result) {
+                    $("#resultadolink").append(result.FechaIngreso);
+                    $("#resultadolink").append(result.FechaPlanificada);
+                    $("#resultadolink").append(result.Descripcion);
+                }
+            });
+        });
+    });
+</script>*@
+
+
+<h2>Ingresar.Rendición de Gastos</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Rendicion</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fecha)
+            @Html.ValidationMessageFor(model => model.Fecha)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Descripcion)
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gasto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gasto)
+            @Html.ValidationMessageFor(model => model.Gasto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Observacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Observacion)
+            @Html.ValidationMessageFor(model => model.Observacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VisitaID, "Visita")
+        </div>
+        <div class="editor-field">
+            @*@Html.DropDownList("VisitaID", String.Empty)*@
+            @Html.TextBoxFor(model => model.VisitaID)
+            @Html.ValidationMessageFor(model => model.VisitaID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserId, "Usuario")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("UserId", String.Empty)            
+            @Html.ValidationMessageFor(model => model.UserId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+<div id="listadovisitas">
+
+    <h2>Listado de Visitas</h2>
+
+    @{
+        List<RGastos.DAL.Visita> Visitas = ViewBag.TodasVisitas;
+
+        <table class="bordered">
+
+            <tr>
+                <th>Correlativo</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Visitas)
+            {
+                <tr>
+                    <td>@item.VisitaID.ToString()</td>
+                    <td>@Ajax.ActionLink("Ver Detalle", "ListadoVisitas", new { visitId = item.VisitaID }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "DetalleVisita" })</td>
+                    @*<td><span onclick="$('#VisitaID).val(this.innerHTML);">Seleccionar</span></td>*@
+                    <td><a onclick="document.getElementById('VisitaID').value='@item.VisitaID';">Seleccionar</a></td>                                       
+                </tr>  
+            }
+
+        </table>
+    }
+
+</div>
+
+
+<div id="DetalleVisita">
+    No hay visita seleccionada.
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

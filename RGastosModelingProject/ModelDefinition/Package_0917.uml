@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4862aa41-91f4-4fe1-846f-6687c36a9cd4"
+  name="RGastos"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e382c3a5-9c0a-45ea-83ca-35a293714838"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DRGastos"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="04fadb14-56a8-4c75-8871-ad17f63b7ad4"
+        LastKnownName="DAL"
+        LastKnownLocation="Package1_0917.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9d10384c-b83c-4bb5-8ff7-a6e5f650c557"
+        LastKnownName="Models"
+        LastKnownLocation="Package5_0917.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

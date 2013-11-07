@@ -193,6 +193,11 @@
     <Compile Include="Controllers\RendicionController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAL\CVisits.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CVisits.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DAL\IVisitsRepository.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -214,6 +219,14 @@
     </Compile>
     <Compile Include="Migrations\201308220533153_initial.Designer.cs">
       <DependentUpon>201308220533153_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311070540207_errorazure.cs" />
+    <Compile Include="Migrations\201311070540207_errorazure.Designer.cs">
+      <DependentUpon>201311070540207_errorazure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311070712475_funcionazure.cs" />
+    <Compile Include="Migrations\201311070712475_funcionazure.Designer.cs">
+      <DependentUpon>201311070712475_funcionazure.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs">
       <SubType>Code</SubType>
@@ -322,8 +335,6 @@
     <None Include="DAL\CVisits.dbml.layout">
       <DependentUpon>CVisits.dbml</DependentUpon>
     </None>
-    <None Include="Properties\PublishProfiles\metsorendiciongastos - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\metsorendiciongastos - Web Deploy.pubxml" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\agregar-icon.jpg" />
     <Content Include="Images\bala-metso-listas.png" />
@@ -357,6 +368,8 @@
     <Content Include="Images\semi-blanco.png" />
     <Content Include="Images\sitio-web-icono.png" />
     <Content Include="Images\titulos-cajas-home.png" />
+    <None Include="Properties\PublishProfiles\metsorendiciongastos - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\metsorendiciongastos - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
@@ -403,7 +416,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -426,6 +441,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201308220533153_initial.resx">
       <DependentUpon>201308220533153_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311070540207_errorazure.resx">
+      <DependentUpon>201311070540207_errorazure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311070712475_funcionazure.resx">
+      <DependentUpon>201311070712475_funcionazure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="713617e4-d505-4dfc-8c3b-62c04c6c8df8"
+  name="RGastosModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e0043184-b0c7-47c3-ae4e-41b433373c2b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3D::"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="0a55d718-d496-4419-af0d-b67c55957764">
+      <profileInstance
+        Id="da69592c-0d6a-4436-8a52-c683bb2c1687"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4862aa41-91f4-4fe1-846f-6687c36a9cd4"
+        LastKnownName="RGastos"
+        LastKnownLocation="Package_0917.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="df377ab3-e7d0-42a3-917c-897c758424ef"
+        LastKnownName="System"
+        LastKnownLocation="Package2_0917.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="70160c49-f711-47eb-8017-38ef12f0dec5"
+        name="Visita"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="63c4f17e-11f6-4fb3-86f3-131ebea41485"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Type%3DVisita"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="722202e9-7c04-4607-9f2d-9dced9232a28"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1a6713c-907e-4ca0-b296-786375c3a9b9">
+                <propertyInstance
+                  Id="b62640e2-1bf3-44cd-aa7e-9e15efc845b4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b430735-6396-47a8-b7fb-45fd21ee50be">
+                <propertyInstance
+                  Id="c15a3912-5e58-4abe-8a79-da61f65509ed"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="865687f5-b01a-454e-bfe1-0e915ddcd62a">
+                <propertyInstance
+                  Id="093da703-36f4-4797-9700-da65100f71a0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb201274-e48e-4cb0-bd5c-9f4491670015">
+                <propertyInstance
+                  Id="aae085ed-d95d-4034-98d9-728f25458521"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="12defee6-1fb0-41a0-b996-c8caa4f1b879">
+                <propertyInstance
+                  Id="f423b1d9-3ef0-4195-bd70-a0033cd57be6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8fe8b051-bb18-43f0-8942-ae10adce22a8"
+        name="CVisitsDataContext"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a83c3d9a-9fa1-4c04-9178-aa718111afe1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Type%3DCVisitsDataContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c31ed72e-6630-4417-9569-a0a0a490aad0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2e4ae75-489d-453f-b856-f98b25354d98">
+                <propertyInstance
+                  Id="98fa58af-f0ad-40da-bc93-d8ae66a44758"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="850fb299-009a-46d4-b801-e16352b47600">
+                <propertyInstance
+                  Id="85bb5011-5880-47f1-954c-cfb33d2e02fe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c596b392-466c-4abf-80e8-6f070b2a8b1e">
+                <propertyInstance
+                  Id="4dfcb59e-5e45-4459-af21-0f40c0756812"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="414710ef-0e5f-49b8-8aab-c042932fc347">
+                <propertyInstance
+                  Id="51a47f30-85d9-4b46-95fb-6e920722dd6a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6ffd66b1-4def-4f5e-9454-04d22e8b79ae">
+                <propertyInstance
+                  Id="921ea97b-7908-49b6-b29d-1400249ea77e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d3b8e716-c8aa-49b3-a5d3-22dbed749685"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

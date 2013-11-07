@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="04fadb14-56a8-4c75-8871-ad17f63b7ad4"
+  name="DAL"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="f4bea176-5266-410e-9a35-edf5a44b6c1f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DRGastos.DAL"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="430373d3-6fe8-46ba-8a6c-8ecfea27b5c5">
+      <profileInstance
+        Id="f77a09c2-d5a6-4a64-8866-4044f78bfd6b"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="f0d43a7c-f616-48d8-9430-afef9561890a"
+        name="IVisitsRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="5b32abdc-da17-4ef3-8b36-385d61b46326"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DIVisitsRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="64e2f4f1-a1b7-4cfc-9968-19b499cfb345"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="965513e1-680a-42f2-baa2-44d267d806fc">
+                <propertyInstance
+                  Id="ad8867cd-f951-4595-b27a-776376c51143"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2a4bb2d-186c-4b67-9f95-3b8325d2eeee">
+                <propertyInstance
+                  Id="f75fee20-dd40-4cae-9237-8e171d41788b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6da1ecf6-b95d-4e17-b6ba-79481ecc1751">
+                <propertyInstance
+                  Id="b2097140-0263-434b-a3a5-fadd0d8d5f77"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d7214c77-6c28-43bc-9ce5-63ef609dee59">
+                <propertyInstance
+                  Id="1397ff13-a7c2-4780-a163-8cfae1157f59"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="77617028-e9c9-4d00-96b9-7e5205134ac8"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="1d12b533-7f23-49f8-b4ae-85616f88588a"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package2_0917.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation
+            Id="3d947981-289d-47f2-af19-df307b7f1441"
+            name="GetVisits"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ec40b95-df16-4de9-9aec-357383fe21db"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DIVisitsRepository Member%3DGetVisits"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1740cff2-7c8b-4500-a4ac-2ab47d294c1a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dd4eb1e-8365-45f1-ad20-394bbdabbbda">
+                    <propertyInstance
+                      Id="bc59450b-0d8e-4a87-9af0-de589af05c79"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b559623f-da8b-40cc-94dd-e8489d875374">
+                    <propertyInstance
+                      Id="25c500a2-ce98-4362-8349-fbd04e87b386"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68fc44ce-aa3f-409a-a014-d56681c2d2aa">
+                    <propertyInstance
+                      Id="19f126c8-fbc5-42d3-bbce-cbdcffcb6f36"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8212fec-c613-4d77-bd8d-d1463cff87fb">
+                    <propertyInstance
+                      Id="98a5730e-555e-4910-8db5-0e96e5426c4c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46d1c246-cf81-46ec-8d09-ad1647d40a0e">
+                    <propertyInstance
+                      Id="0777e880-ae3c-416d-a905-c0aa41711798"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4354c6e-fa82-4b1a-8fae-d270af158283">
+                    <propertyInstance
+                      Id="bf4cb9c6-60dc-4c42-b32a-b6deb7e28fc7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4f61e0ae-f0c1-46d9-bfd4-8aa2395d49a9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="d53e0640-8a10-4900-80c2-727105c7e9fa"
+                      LastKnownName="IEnumerable&lt;Visita‎&gt;"
+                      LastKnownLocation="Package4_0917.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dc213ed2-634f-4601-a998-a7c5c012b414"
+            name="GetVisitByID"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ec87ab77-61a9-4c04-b480-c7e7d877fe89"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DIVisitsRepository Member%3D(Name%3DGetVisitByID OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="359a3ff9-196b-40f2-ba34-db67b2e5c5cf"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40d72bc6-a5dc-4193-a2c1-a8d92002a4ab">
+                    <propertyInstance
+                      Id="d77f3545-7dea-4836-8a07-2ed7ad1609ca"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30db98c8-7e69-4432-b4f1-c77b5f4cec9a">
+                    <propertyInstance
+                      Id="caadf6ee-ddbc-4aed-a2d9-0a7fa94928ce"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edd7a3ee-3851-4d6d-b726-afa35f1e960b">
+                    <propertyInstance
+                      Id="183539b2-4d79-4774-8cfc-d5c749ec73d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e40c4a9-3989-41d9-844e-bd6a1afaeed3">
+                    <propertyInstance
+                      Id="91189bde-6554-4416-a269-9eddb2f20704"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef0b9ae1-4572-427e-80e6-5146a3b31fb9">
+                    <propertyInstance
+                      Id="3dbfc1a2-7db7-455f-832f-baeba4c0bc8c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="085c1c63-25e7-435d-ae1b-52830f9dbed0">
+                    <propertyInstance
+                      Id="596e7b02-a156-42ef-af27-3b2eea448ff7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4fa17930-ecbb-48f6-b153-ce4a99d5951f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70160c49-f711-47eb-8017-38ef12f0dec5"
+                      LastKnownName="Visita"
+                      LastKnownLocation="RGastosModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eb1d05dd-b876-482d-ad8a-8c1aad0a4f73"
+                  name="visitId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="769afefb-c17e-4dd7-830f-68ed387cb7b8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DIVisitsRepository Member%3D(Name%3DGetVisitByID OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DvisitId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="RGastosModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="74e930fc-b877-489e-bd94-76b11c89ad21"
+        name="VisitsRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="efa0dbeb-0c3f-4cef-b7b8-824fe346a6b1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8978d09e-7196-45cf-84a6-8b53e652ad50"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f745c6b-a9d5-44fa-931e-809f36052cbe">
+                <propertyInstance
+                  Id="19c811da-6652-4d6e-bac7-0c544960f2b1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e269ef7-bbf3-4569-af0b-4f9d0dac8777">
+                <propertyInstance
+                  Id="251f090d-a94c-4735-949e-512768f75542"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57ee05de-287f-4faa-8b9e-d6519da0af10">
+                <propertyInstance
+                  Id="21a0563f-450a-45b5-abe2-601bdd66181c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8bc38aa2-8b19-4804-94d1-a4c54a091d99">
+                <propertyInstance
+                  Id="ed78a398-d62b-4d38-8b5b-22e735a0811b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bb5d488-6dc7-41a1-932e-3ff889c16d0f">
+                <propertyInstance
+                  Id="6b6abc94-96a6-411a-99a2-e78aba730d22"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="56ebfeac-90a4-48e3-982b-230fcbbe00d7">
+            <interfaceMoniker
+              Id="f0d43a7c-f616-48d8-9430-afef9561890a"
+              LastKnownName="IVisitsRepository"
+              LastKnownLocation="Package1_0917.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="9dbd44fb-c6d4-4f5e-9b36-89cdba741866">
+            <interfaceMoniker
+              Id="1d12b533-7f23-49f8-b4ae-85616f88588a"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package2_0917.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7e401b49-8cef-4507-bae9-0f24ba2eb74d"
+            name="context"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6bd3ec90-d04d-4ba2-9637-24317c75df01"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3Dcontext"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b3e20e1e-b2ae-495b-af6d-99d7e9bf3d3c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f502cac1-44f2-435a-9027-823199fd405b">
+                    <propertyInstance
+                      Id="2ce2c05e-1885-454c-a7bf-1d481451ec5a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c79586b7-dfad-4b1f-be5b-61eb1c95a324">
+                    <propertyInstance
+                      Id="3ba4745b-02f7-40b1-8b5a-7940cae1f544"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04e85849-60b0-406e-8659-1f218cd0b33d">
+                    <propertyInstance
+                      Id="18b63fe3-0e7f-4bc2-b432-849406447dda"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffbe6994-b4b8-4346-9842-0ac875bf4f95">
+                    <propertyInstance
+                      Id="b18d0591-56ce-4a88-a4fe-7c11f26c0a66"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f132f227-59e2-44da-a687-cce317e1ec5f">
+                    <propertyInstance
+                      Id="d88dc68d-2daf-468f-886f-ebc5aee42ee4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="8fe8b051-bb18-43f0-8942-ae10adce22a8"
+                LastKnownName="CVisitsDataContext"
+                LastKnownLocation="RGastosModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d47dfca1-c7ee-492d-a74c-eef0027f254b"
+            name="disposed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fad6bab7-3344-48c4-bd8b-c80459b07a9d"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3Ddisposed"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0735a1e4-7cd5-4897-9dad-c0a66ee69f30"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6242bb3-32af-4be5-8ccb-563a692d52f4">
+                    <propertyInstance
+                      Id="c1aa92fb-14d6-4b11-bf62-fd3fb952cc11"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d6ba9a2-16f9-4db5-a6bd-283661eeb7b5">
+                    <propertyInstance
+                      Id="e2c6cbef-faf0-4c7d-82a8-9101b149efb1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa992df0-cf9f-4348-b393-a95a146561f9">
+                    <propertyInstance
+                      Id="ba74e3b7-08b4-4f2b-b09b-689ae09be075"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56407f04-6398-4b2b-b8f7-61a267110cc8">
+                    <propertyInstance
+                      Id="79dce0ff-a733-40f1-8049-a2aca039ddfc"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea7e81dc-b54b-420f-b464-e8284d166faa">
+                    <propertyInstance
+                      Id="5d0aa707-5b34-4134-bb55-ee06eb9de12a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="RGastosModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="58eb1e41-d8b8-4cb7-b793-a80136a9c23d"
+            name="VisitsRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c1b8637b-09f1-4d0a-84e6-9cac5e23986c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Type%3DCVisitsDataContext)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="442ee0b8-6f29-4d5d-ba27-affa30692a1e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc7c7162-8dfd-45d6-a008-82426935316f">
+                    <propertyInstance
+                      Id="dff738ac-5dc7-4b2f-8816-660b01f61aae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64ab8bb5-2269-403b-b87a-c87bd7c2b796">
+                    <propertyInstance
+                      Id="70ab0aa3-587e-468e-9a5f-fd91f96ac0b2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43f1875b-e5a0-4ba6-ba52-7eb8910dac50">
+                    <propertyInstance
+                      Id="b8763b83-b728-486e-ad01-9ecc5df0a5c9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f55b7a0a-e68d-43c3-aba6-d7ce646a9127">
+                    <propertyInstance
+                      Id="7f242304-bfd1-4261-89be-93d4f7b71b66"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57840ac5-9c8c-4481-aa8d-152b4196f397">
+                    <propertyInstance
+                      Id="7e807274-1db7-42b0-bbff-5a82d3197df6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37e47b91-3a1b-4812-b390-b2fcb4838418">
+                    <propertyInstance
+                      Id="e89a096a-136d-45d9-a12d-7abcf504c886"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5e6016c9-2ad4-4da0-a764-4b0b7b82eab9"
+                  name="context"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8de4a848-1471-4314-b285-e7122ab345b0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Type%3DCVisitsDataContext)]) ParameterIdentifier%3Dcontext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8fe8b051-bb18-43f0-8942-ae10adce22a8"
+                      LastKnownName="CVisitsDataContext"
+                      LastKnownLocation="RGastosModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="355dd0e1-aacb-42e6-b44a-83910809451b"
+            name="GetVisits"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7c358b86-8102-49f0-aa9b-6c0b5863e350"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3DGetVisits"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d91e49c3-9a71-416c-be04-2f7f92520de8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aeb12474-f8d9-4e7f-9897-7cad91979842">
+                    <propertyInstance
+                      Id="3fab8149-faba-4b41-8adc-83c63846a85c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88b2cb43-7c99-44ee-b3e5-b52f547992b6">
+                    <propertyInstance
+                      Id="7ac5396c-c24f-4fe5-8cd0-80bf2488c513"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20dce9cb-1fc0-49f3-a91b-71c227852ee0">
+                    <propertyInstance
+                      Id="7890474a-f106-4192-9fe3-c5380c562fd4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="372b8096-0ae3-4678-875b-7682a0cb9b00">
+                    <propertyInstance
+                      Id="26cf4d88-14f1-41cd-a5e2-4ef2565464bb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9f8b899-66bf-4372-9f3e-592b841e5ef6">
+                    <propertyInstance
+                      Id="b770572f-e1da-41ae-80f8-e5139f41a8c0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e94efd2-9f5a-4089-9646-ff02f360fe6d">
+                    <propertyInstance
+                      Id="13d74c7d-f257-4838-ace4-002c262ac4e1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2a2824b5-7fbb-4970-9cda-c7c0cd762f71"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="d53e0640-8a10-4900-80c2-727105c7e9fa"
+                      LastKnownName="IEnumerable&lt;Visita‎&gt;"
+                      LastKnownLocation="Package4_0917.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ad353978-dcdc-485e-88ce-c57653712daa"
+            name="GetVisitByID"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="abb28b6b-19f8-4e9c-9edd-7ada33d9764f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3D(Name%3DGetVisitByID OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c9fc4331-4ad1-44d4-b5a0-4c829c01922d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff590f59-15f4-4aeb-ae69-f31e4a4a6310">
+                    <propertyInstance
+                      Id="41554284-d743-418c-9271-5586239508e3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5f6141a-cd70-40f7-be17-d424565f1c6f">
+                    <propertyInstance
+                      Id="f71cba59-4e66-410d-a483-82d1e6032e41"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53ed9b06-b60d-41e8-84c9-2b9534f89f04">
+                    <propertyInstance
+                      Id="c85ac53d-b67c-4f0a-869e-bb7bd7f0f868"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1314f6b1-8acb-422e-8334-7d423e907b16">
+                    <propertyInstance
+                      Id="38665c9b-bc04-41fe-8384-ce48a5b992c3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae7d5cbe-2eeb-4ae3-86ad-57d9abd733c5">
+                    <propertyInstance
+                      Id="4e110960-6bdb-4221-a528-303eb2b50fc6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="610e82a8-d9d4-4aeb-abef-66c3fa9ba09c">
+                    <propertyInstance
+                      Id="f3773925-6c57-42ae-a9fd-c84c5bd42cb8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8fbeecea-8007-4134-bcbe-7fc9f39312e2"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70160c49-f711-47eb-8017-38ef12f0dec5"
+                      LastKnownName="Visita"
+                      LastKnownLocation="RGastosModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="25ddf011-e6de-43f3-8af4-0e6404338014"
+                  name="visitId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="104e77e9-39d8-4502-b809-d5423e0ad78b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3D(Name%3DGetVisitByID OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DvisitId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="RGastosModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a1ceb501-cdeb-409c-9aa6-d66af32e8082"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ac698177-22d5-4823-af16-1852bee9e22c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4606cd34-8d4c-47c5-9711-b91a695b30d1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22dfe78e-67e8-4684-9729-6cc98bddb836">
+                    <propertyInstance
+                      Id="58372397-26be-41c0-8930-8edb85338072"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="251669f1-eb39-44c0-a23d-a5d8f490eab9">
+                    <propertyInstance
+                      Id="0642773c-8994-4a47-aeed-84fdaed91cb2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bc82eb2-79f7-4857-929e-32ad72cff7d9">
+                    <propertyInstance
+                      Id="fcb8c2fd-f18e-479a-aab7-331f8a9272e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8758b17-ca68-4b08-9c59-2e97cd3f7321">
+                    <propertyInstance
+                      Id="a6c889af-5f5a-41ad-a056-efb2115835c0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="655fbe39-9b75-4c0d-86f3-1ba5e201aa76">
+                    <propertyInstance
+                      Id="6b4e0cef-19c5-4ead-963b-714e189432c8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7f6510d-1869-45f1-8db7-11fa64dde383">
+                    <propertyInstance
+                      Id="a8920016-f379-4aa2-a806-707fa480ad30"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e10bbba-8be7-40ae-9d3c-8ea1e3845f52"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bc620d93-576f-4f59-9b9b-b8816cb31db1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="RGastosModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b4ab03c6-a02d-463e-84c9-de7b378b80ec"
+            name="Dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="442ab12b-1d3d-4257-90cd-9a1a7bc146ce"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDaniel%2FDocuments%2FVisual Studio 2012%2FProjects%2FRGastos%2FRGastos%2Fbin%2FRGastos.dll&quot; Namespace%3DRGastos.DAL Type%3DVisitsRepository Member%3DDispose"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="53f2c0e0-cfb7-4263-91af-c54c78f52d51"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66573c93-8de4-4ecf-932b-594878bf0b95">
+                    <propertyInstance
+                      Id="5eccfca0-3799-4ac0-9d4d-04896a7cf35e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a962a681-2fdd-4045-bd3a-f2342fd85c43">
+                    <propertyInstance
+                      Id="3c6ef414-7305-4663-bf7f-c688bbf0102c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3776e6a-9b1e-407c-a230-f847cf8c5b5f">
+                    <propertyInstance
+                      Id="6e5a7e84-cc38-4221-9a28-8f86ab74cdf3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc376ea9-f3d6-4270-bbc3-fd8ed0f1552f">
+                    <propertyInstance
+                      Id="ba5ec74f-7293-443c-bcc7-bc2b5cc96b11"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e8de56d-785a-444e-841d-5e48cc8e6a7f">
+                    <propertyInstance
+                      Id="87d198c9-9807-45f4-b1dc-eb5811620944"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a113742d-46a0-44fb-84bb-ac870047e750">
+                    <propertyInstance
+                      Id="9738179e-9f4f-4968-a36b-c982abaf5909"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
