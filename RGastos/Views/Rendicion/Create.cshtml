@@ -4,131 +4,117 @@
     ViewBag.Title = "Ingresar Rendición";
 }
 
+<script>
+    //In this case all SELECTs uses select2...
+    $(document).ready(function () { $("select").select2(); });
+</script>
 
 
-@*<script type="text/javascript">
-    $(function () {        
-        $('#linkvisita').click(function () {
-            var VisitaID = 1; // can be a value from a txtbox            
-            var valor = $('#linkVisita').val();
-            var url = '/Rendicion/Employee?visitaId=' + VisitaID;
-            $.ajax({
-                url: url,
-                type: 'GET',                
-                success: function (result) {
-                    $("#resultadolink").append(result.FechaIngreso);
-                    $("#resultadolink").append(result.FechaPlanificada);
-                    $("#resultadolink").append(result.Descripcion);
-                }
-            });
-        });
-    });
-</script>*@
+<div class="row">
 
+    <div class="col-md-4">
 
-<h2>Ingresar.Rendición de Gastos</h2>
+        <h2>Create Expense Report</h2>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Fecha, "Date")
+                @Html.TextBoxFor(model => model.Fecha, new { @class = "form-control", @placeholder = "Enter date..." })
+                @Html.ValidationMessageFor(model => model.Fecha)
+            </div>
 
-    <fieldset>
-        <legend>Rendicion</legend>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Descripcion, "Description")
+                @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control", @placeholder = "Type text here..." })
+                @Html.ValidationMessageFor(model => model.Descripcion)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Fecha)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Fecha)
-            @Html.ValidationMessageFor(model => model.Fecha)
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Gasto, "Ammount")
+                @Html.TextBoxFor(model => model.Gasto, new { @class = "form-control", @placeholder = "$ Currency" })
+                @Html.ValidationMessageFor(model => model.Gasto)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Descripcion)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Descripcion)
-            @Html.ValidationMessageFor(model => model.Descripcion)
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Observacion, "Observation")
+                @Html.TextAreaFor(model => model.Observacion, new { @class = "form-control", @placeholder = "Type text here..." })
+                @Html.ValidationMessageFor(model => model.Observacion)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Gasto)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Gasto)
-            @Html.ValidationMessageFor(model => model.Gasto)
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.VisitaID, "Visit ID")
+                @Html.TextBoxFor(model => model.VisitaID, new { @class = "form-control", @placeholder = "Related Visit ID" })
+                @Html.ValidationMessageFor(model => model.VisitaID)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Observacion)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Observacion)
-            @Html.ValidationMessageFor(model => model.Observacion)
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserId, "Usuario")
+                @Html.DropDownList("UserId", String.Empty)
+                @Html.ValidationMessageFor(model => model.UserId)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.VisitaID, "Visita")
-        </div>
-        <div class="editor-field">
-            @*@Html.DropDownList("VisitaID", String.Empty)*@
-            @Html.TextBoxFor(model => model.VisitaID)
-            @Html.ValidationMessageFor(model => model.VisitaID)
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.AprobadorID, "Approver")
+                @Html.DropDownList("AprobadorID", String.Empty)
+                @Html.ValidationMessageFor(model => model.AprobadorID)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.UserId, "Usuario")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("UserId", String.Empty)            
-            @Html.ValidationMessageFor(model => model.UserId)
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.RendicionStatusID, "Report Status")
+                @Html.DropDownList("RendicionStatusID", String.Empty)
+                @Html.ValidationMessageFor(model => model.RendicionStatusID)
+            </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
+            <button type="submit" class="btn btn-success">
+                <span class="glyphicon glyphicon-floppy-save"></span>Save
+            </button>
+            
+            <a href="@Url.Action("Index")" class="btn btn-primary"><span class="glyphicon glyphicon-calendar"></span>Back to Report List</a>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+        }
+
+    </div>
+    
+
 </div>
 
 
-<div id="listadovisitas">
+<div class="row">
+    <div id="listadovisitas" class="table-responsive col-md-4">
 
-    <h2>Listado de Visitas</h2>
+        <h2>Listado de Visitas</h2>
 
-    @{
-        List<RGastos.DAL.Visita> Visitas = ViewBag.TodasVisitas;
+        @{
+            List<RGastos.DAL.Visita> Visitas = ViewBag.TodasVisitas;
 
-        <table class="bordered">
+            <table class="table">
 
-            <tr>
-                <th>Correlativo</th>
-                <th></th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Visitas)
-            {
                 <tr>
-                    <td>@item.VisitaID.ToString()</td>
-                    <td>@Ajax.ActionLink("Ver Detalle", "ListadoVisitas", new { visitId = item.VisitaID }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "DetalleVisita" })</td>
-                    @*<td><span onclick="$('#VisitaID).val(this.innerHTML);">Seleccionar</span></td>*@
-                    <td><a onclick="document.getElementById('VisitaID').value='@item.VisitaID';">Seleccionar</a></td>                                       
-                </tr>  
-            }
+                    <th>Visit ID</th>
+                    <th></th>
+                    <th></th>
+                </tr>
 
-        </table>
-    }
+                @foreach (var item in Visitas)
+                {
+                    <tr>
+                        <td>@item.VisitaID.ToString()</td>
+                        <td>@Ajax.ActionLink("Ver Detalle", "ListadoVisitas", new { visitId = item.VisitaID }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "DetalleVisita" })</td>                       
+                        <td><a onclick="document.getElementById('VisitaID').value='@item.VisitaID';">Seleccionar</a></td>
+                    </tr>  
+                }
 
-</div>
+            </table>
+        }
 
-
-<div id="DetalleVisita">
-    No hay visita seleccionada.
+    </div>
+    
+    <div id="DetalleVisita" class="col-md-8">
+    </div>
 </div>
 
 

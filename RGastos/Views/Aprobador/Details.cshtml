@@ -1,0 +1,29 @@
+﻿@model RGastos.Models.Aprobador
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Aprobador</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ApproverName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ApproverName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AprobadorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

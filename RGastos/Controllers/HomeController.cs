@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using RGastos.ViewModels;
+using RGastos.Models;
 
 
 namespace RGastos.Controllers
@@ -11,13 +12,17 @@ namespace RGastos.Controllers
     [Authorize]
     public class HomeController : Controller
     {
+        private RGastosContext db = new RGastosContext();
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-            
+            var rendiciones = new RendicionIndexData();
 
-            return View();
+            rendiciones.RendicionesPendientes = db.Rendicion.Where(p => p.RendicionStatusID == 1).ToList(); //1 = Pending
+            rendiciones.RendicionesAprobadas = db.Rendicion.Where(a => a.RendicionStatusID == 2).ToList(); // 2 = Approved
+            rendiciones.RendicionesRechazadas = db.Rendicion.Where(r => r.RendicionStatusID == 3).ToList(); // 3 = Rejected
+            
+            return View(rendiciones);
         }
 
         public ActionResult About()

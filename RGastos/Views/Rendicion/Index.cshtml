@@ -4,60 +4,73 @@
     ViewBag.Title = "Listado Rendiciones";
 }
 
-<h2>Listado.Rendiciones de Gastos</h2>
+<h2>Expenses Report List</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Report", "Create")
 </p>
-<table class="bordered">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gasto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Observacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitaID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserProfile.UserName)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fecha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gasto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Observacion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VisitaID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserProfile.UserName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RendicionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RendicionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RendicionID })
-        </td>
-    </tr>
-}
+<div class="row">
 
-</table>
+    <div class="col-md-12">
+
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Date Added
+                    </th>
+                    <th>Description
+                    </th>
+                    <th>Ammount
+                    </th>
+                    <th>Observation
+                    </th>
+                    <th>Visit Related
+                    </th>
+
+                    <th>Status</th>
+                    <th>User
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descripcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gasto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Observacion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VisitaID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RendicionStatus.Descripcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserProfile.UserName)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.RendicionID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RendicionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RendicionID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+

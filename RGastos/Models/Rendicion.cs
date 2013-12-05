@@ -11,6 +11,7 @@ namespace RGastos.Models
 {
     public class Rendicion
     {
+
         //ID
         public int RendicionID { get; set; }
         
@@ -37,16 +38,20 @@ namespace RGastos.Models
         [DisplayName("Correlativo Visita")]
         public int VisitaID { get; set; } //Se accede a través de Clase de Contexto Especial
 
+        //[Required]
+        //[DisplayName("Approver Name")]
+        public int AprobadorID { get; set; }
+        public virtual Aprobador Aprobador { get; set; }
+
+        public int RendicionStatusID { get; set; }
+        public virtual RendicionStatus RendicionStatus { get; set; }
 
         //---------------------------------------------------
         // RELACIONES
         //
-
+        
         //A uno...
-        public int UserId { get; set; }
-
-        
-        
+        public int UserId { get; set; }                
         public virtual UserProfile UserProfile { get; set; }
         
 

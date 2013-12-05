@@ -1,16 +1,21 @@
 ﻿<h2>Detalle Visita</h2>
 
-<table class="bordered">
-    <tr>
-        <th>Fecha Ingreso</th>
-        <th>Fecha Planificada</th>
-        <th>Descripción</th>                    
-    </tr>
+<table class="table">
 
-    <tr>
-        <td>@ViewBag.FechaIngreso</td>
-        <td>@ViewBag.FechaPlanificada</td>
-        <td>@ViewBag.Descripcion</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Date Added</th>
+            <th>Scheduled Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>@ViewBag.FechaIngreso</td>
+            <td>@ViewBag.FechaPlanificada</td>
+            <td>@ViewBag.Descripcion</td>
+        </tr>
+    </tbody>
 
 </table>

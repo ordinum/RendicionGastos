@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using RGastos.Models;
 using RGastos.DAL;
+using Mvc.Mailer;
+using RGastos.Mailers;
 
 namespace RGastos.Controllers
 {
@@ -29,7 +31,12 @@ namespace RGastos.Controllers
             this.visitsRepository=visitsRepository;
         }
 
-
+        private IUserMailer _userMailer = new UserMailer();
+        public IUserMailer UserMailer
+        {
+            get { return _userMailer; }
+            set { _userMailer = value; }
+        }
         
         //
         // GET: /Rendicion/
@@ -72,13 +79,11 @@ namespace RGastos.Controllers
             var resultado = visitsRepository.GetVisitByID(visitId);
             ViewBag.FechaIngreso = resultado.FechaIngreso.ToShortDateString();
             ViewBag.FechaPlanificada = resultado.FechaPlanificada.ToShortDateString();
-            ViewBag.Descripcion = resultado.Descripcion;
+            ViewBag.Descripcion = resultado.Descripcion;            
             
             //Name of our PartialView is Restaurant
             return PartialView("_ListadoVisitas");
         }
-
-
 
         //
         // GET: /Rendicion/Create
@@ -87,6 +92,8 @@ namespace RGastos.Controllers
         {
             ViewBag.VisitaID = new SelectList(visitsRepository.GetVisits(), "VisitaID", "Descripcion");
             ViewBag.UserId = new SelectList(db.UserProfiles, "UserId", "UserName");
+            ViewBag.AprobadorID = new SelectList(db.Aprobador, "AprobadorID", "ApproverName");
+            ViewBag.RendicionStatusID = new SelectList(db.RendicionStatus, "RendicionStatusID", "Descripcion");
             ViewBag.TodasVisitas = visitsRepository.GetVisits();
             return View();
         }
@@ -102,6 +109,15 @@ namespace RGastos.Controllers
             {
                 db.Rendicion.Add(rendicion);
                 db.SaveChanges();
+
+
+                //Get data for mail notification...EnvioRendicion(string mailaprobador, int rendicionid, int customervisitid, string descripcion, string gasto, string usuario)
+                var approvermail = db.Aprobador.Where(a => a.AprobadorID == rendicion.AprobadorID).Select(a => a.Email).SingleOrDefault().ToString();
+                var username = db.UserProfiles.Where(u => u.UserId == rendicion.UserId).Select(u => u.UserName).SingleOrDefault().ToString();
+
+                UserMailer.EnvioRendicion(approvermail, rendicion.RendicionID, rendicion.VisitaID, rendicion.Descripcion, rendicion.Gasto.ToString(), username).Send();
+
+
                 return RedirectToAction("Index");
             }
 
@@ -109,6 +125,28 @@ namespace RGastos.Controllers
             ViewBag.UserId = new SelectList(db.UserProfiles, "UserId", "UserName", rendicion.UserId);
             ViewBag.TodasVisitas = visitsRepository.GetVisits();
 
+            return View(rendicion);
+        }
+
+
+        public ActionResult ApproveExpense(int rendicionid, int status)
+        {
+            Rendicion rendicion = db.Rendicion.Find(rendicionid);
+            rendicion.RendicionStatusID = status;
+            db.Entry(rendicion).State = EntityState.Modified;
+            db.SaveChanges();
+
+
+            //AprobacionRendicion(string nombreaprobador, int rendicionid, int customervisitid, string descripcion, string gasto, string mailusuario)
+            var nombreaprobador = db.Aprobador.Where(a => a.AprobadorID == rendicion.AprobadorID).Select(a => a.ApproverName).FirstOrDefault().ToString();            
+
+            return RedirectToAction("Index");
+            
+        }
+
+        public ActionResult ExpenseApproval(int rendicionid)
+        {
+            Rendicion rendicion = db.Rendicion.Find(rendicionid);
             return View(rendicion);
         }
 

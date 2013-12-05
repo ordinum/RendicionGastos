@@ -100,8 +100,6 @@ c:\users\daniel\documents\visual studio 2012\Projects\RGastos\RGastos\bin\zh-Han
 c:\users\daniel\documents\visual studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.csprojResolveAssemblyReference.cache
 c:\users\daniel\documents\visual studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.dll
 c:\users\daniel\documents\visual studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.pdb
-C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.Migrations.InitialCreate.resources
-C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\bin\Mvc.Mailer.dll
 C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.Migrations.initial.resources
-C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.Migrations.errorazure.resources
-C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.Migrations.funcionazure.resources
+C:\Users\Daniel\Documents\Visual Studio 2012\Projects\RGastos\RGastos\obj\Debug\RGastos.csproj.GenerateResource.Cache

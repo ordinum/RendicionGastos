@@ -1,0 +1,91 @@
+﻿@model RGastos.Models.Rendicion
+
+@{
+    ViewBag.Title = "Expense Details | Approval";
+}
+
+<h2>ExpenseDetails</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset disabled>
+
+        @Html.HiddenFor(model => model.RendicionID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fecha)
+            @Html.ValidationMessageFor(model => model.Fecha)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Descripcion)
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gasto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gasto)
+            @Html.ValidationMessageFor(model => model.Gasto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Observacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Observacion)
+            @Html.ValidationMessageFor(model => model.Observacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VisitaID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VisitaID)
+            @Html.ValidationMessageFor(model => model.VisitaID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AprobadorID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AprobadorID)
+            @Html.ValidationMessageFor(model => model.AprobadorID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RendicionStatusID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RendicionStatusID)
+            @Html.ValidationMessageFor(model => model.RendicionStatusID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserId)
+            @Html.ValidationMessageFor(model => model.UserId)
+        </div>
+
+    </fieldset>
+}
+
+<a href="@Url.Action("ApproveExpense","Rendicion", new { rendicionid = Model.RendicionID, status = 2 })" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Approve</a>
+<a href="@Url.Action("ApproveExpense","Rendicion", new { rendicionid = Model.RendicionID, status = 3 })" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Reject</a>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

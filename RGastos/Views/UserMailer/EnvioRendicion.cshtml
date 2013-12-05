@@ -1,0 +1,70 @@
+<style>
+
+    body
+    {
+        font-family:Verdana,Arial,sans-serif;
+    }
+
+    img
+    {
+        border:none;        
+    }
+
+    h1,h2,h3,h4,h5,h6
+    {                
+        color:#808080;
+        margin-bottom:5px;
+        margin-top:5px;
+    }
+
+    h1
+    {
+        font-size:1.5em;
+    }
+
+    h2
+    {
+        font-size:1.1em;
+    }
+
+    p
+    {
+        font-size:0.9em;
+        color:#000000;
+    }
+
+    .rendicion-detalles
+    {
+        margin-top: 10px;
+        padding:8px;
+        clear:both;
+        border-width:1px;
+        border-color:#c6c6c6;
+        border-style:solid;
+        background-color:#e4e4e4;
+    }
+
+    .description
+    {
+        clear:both;
+        margin-top:3px;        
+    }
+
+
+</style>
+<img src="http://www.metso.com/corporation/home_eng.nsf/WebSettings/Settings/$file/signature.png" alt="Metso Corporation" />
+
+<h2>Ingreso de Rendición de Gastos</h2>
+<p>Se ha ingresado una nueva Rendición de Gastos asociada a la Cuestomer Visit N° @ViewBag.CustomerVisit para su aprobación.</p>
+<p>Detalles :</p>
+
+<div class="rendicion-detalles">
+    <p>Rendidor : <strong>@ViewBag.Usuario</strong></p>
+    <p>Gasto : <strong>$@ViewBag.Gasto</strong></p>
+    <p>Descripcion :</p>
+    <p class="description">
+        @ViewBag.Descripcion
+    </p>
+</div>
+
+<p>Click <a href="http://localhost:3921/Rendicion/ExpenseApproval?id=@ViewBag.RendicionID" target="_blank">aquí</a> para aprobar de la Rendición de Gastos asignada.</p>

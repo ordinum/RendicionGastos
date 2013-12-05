@@ -3,68 +3,65 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <title>Sistema Rendición de Gastos - Metso Minerals</title>
+    <title>Sistema Rendición de Gastos - Metso Minerals Chile</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Content/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/Content/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.css" type="text/javascript" />    
+    <link rel="stylesheet" href="@Url.Content("~/Content/select2.css")" type="text/javascript" />
+
+    
+    @Scripts.Render("~/bundles/jquery")
+    <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/themes/base/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="@Url.Content("~/Scripts/select2.js")" type="text/javascript"></script>
+
 </head>
 <body>
-    <header>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <a class="logo-metso" href="@Url.Action("Index", "Home")">
-                    <img class="logo-metso" src="~/Images/metso-logo.png" alt="Metso Minerals" /></a>
-            </div>
-            <div class="float-right">
-                <section id="login">
-                    @Html.Partial("_LoginPartial")
-                </section>
-                <nav>
-                    <div id='cssmenu'>
-                        <ul>
-                            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                            
-                            <li class='has-sub'><a href='#'><span>Agregar</span></a>
-                                <ul>
-                                    <li>@Html.ActionLink("País", "Create", "Pais")</li>
-                                    <li>@Html.ActionLink("Rendición de Gastos", "Create", "Rendicion")</li>                                    
-                                </ul>
-                            </li>
 
-                            <li class='has-sub'><a href='#'><span>Listados</span></a>
-                                <ul>
-                                    <li>@Html.ActionLink("País", "Index", "Pais")</li>
-                                    <li>@Html.ActionLink("Rendición de Gastos", "Index", "Rendicion")</li>                                    
-                                </ul>
-                            </li>
+    <!-- Loads navbar (menu) -->
+    @if (Request.IsAuthenticated)
+    {
+        @Html.Partial("_NavBar")
+    }
 
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <div id="body">
-        @RenderSection("featured", required: false)
-        <section class="content-wrapper main-content clear-fix">
-            @RenderBody()
-        </section>
-    </div>
-    <footer>
-        <div class="content-wrapper">
-            <div class="grid-33">
-                <hgroup class="headers-footer">
-                    <h3 class="logo-footer">Metso Minerals</h3>
-                    <h4>Sistema Rendición de Gastos - Metso Minerals</h4>
-                    <h5 class="chile">Chile | <strong>&copy; Versión 2013.08.22</strong></h5>
-                </hgroup>
-            </div>
-        </div>
-    </footer>
+    <!-- Wrapper for all page content EXCEPT (sticky) footer -->
+    @if (Request.IsAuthenticated)
+    {
+        <div id="wrap">
+            @RenderSection("featured", required: false)
 
-    @Scripts.Render("~/bundles/jquery")
+            <!-- Begin page content, loads VIEWs -->
+            <div class="container">
+                @RenderBody()
+            </div>
+
+            <!-- Pusher for sticky/fixed footer, must be same HEIGHT as #footer -->
+            <div id="push"></div>
+
+        </div>    
+    }
+    else
+    {
+        @RenderBody()
+    }
+
+    <!-- Loads footer, has #footer div inside -->
+    @if (Request.IsAuthenticated)
+    {
+        @Html.Partial("_FooterBar")
+    }
+
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

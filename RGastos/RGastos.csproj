@@ -43,6 +43,9 @@
       <HintPath>..\packages\jQueryUIHelpers.Mvc4.2.1.0\lib\net40\JQueryUIHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mvc.Mailer">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -186,6 +189,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AprobadorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PaisController.cs">
       <SubType>Code</SubType>
@@ -193,6 +197,7 @@
     <Compile Include="Controllers\RendicionController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\RendicionStatusController.cs" />
     <Compile Include="DAL\CVisits.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,30 +213,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201308220517285_InitialCreate.cs">
-      <SubType>Code</SubType>
+    <Compile Include="Mailers\IUserMailer.cs" />
+    <Compile Include="Mailers\UserMailer.cs" />
+    <Compile Include="Migrations\201311280902179_initial.cs" />
+    <Compile Include="Migrations\201311280902179_initial.Designer.cs">
+      <DependentUpon>201311280902179_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201308220517285_InitialCreate.Designer.cs">
-      <DependentUpon>201308220517285_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201308220533153_initial.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Migrations\201308220533153_initial.Designer.cs">
-      <DependentUpon>201308220533153_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311070540207_errorazure.cs" />
-    <Compile Include="Migrations\201311070540207_errorazure.Designer.cs">
-      <DependentUpon>201311070540207_errorazure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311070712475_funcionazure.cs" />
-    <Compile Include="Migrations\201311070712475_funcionazure.Designer.cs">
-      <DependentUpon>201311070712475_funcionazure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Aprobador.cs" />
     <Compile Include="Models\Ciudad.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -247,6 +237,7 @@
     <Compile Include="Models\Rendicion.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\RendicionStatus.cs" />
     <Compile Include="Models\RGastosContext.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -254,15 +245,18 @@
     <Compile Include="ViewModels\ListadoPrueba.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\RendicionIndexData.cs" />
     <Compile Include="ViewModels\VisitasIndex.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\RGastos-v1.mdf" />
-    <Content Include="App_Data\RGastos-v1_log.ldf">
-      <DependentUpon>RGastos-v1.mdf</DependentUpon>
-    </Content>
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\select2.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -332,46 +326,35 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="DAL\CVisits.dbml.layout">
       <DependentUpon>CVisits.dbml</DependentUpon>
     </None>
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\agregar-icon.jpg" />
-    <Content Include="Images\bala-metso-listas.png" />
-    <Content Include="Images\brasil-miniatura.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\chile-miniatura.png" />
-    <Content Include="Images\degrade-horizontal-cajas.png" />
-    <Content Include="Images\degrade-horizontal.png" />
-    <Content Include="Images\fecha-titulo-fondo.png" />
-    <Content Include="Images\fondo-cajas-verde.png" />
-    <Content Include="Images\fondo-contacto.jpg" />
-    <Content Include="Images\fondo-footer.png" />
-    <Content Include="Images\fondo-home.jpg" />
-    <Content Include="Images\fondo-login.jpg" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\listados-icon.jpg" />
-    <Content Include="Images\metso-logo-footer.png" />
-    <Content Include="Images\metso-logo.png" />
-    <Content Include="Images\movimientos-icon.jpg" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
-    <Content Include="Images\rounded.png" />
-    <Content Include="Images\semi-blanco.png" />
-    <Content Include="Images\sitio-web-icono.png" />
-    <Content Include="Images\titulos-cajas-home.png" />
     <None Include="Properties\PublishProfiles\metsorendiciongastos - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\metsorendiciongastos - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Images\brasil-miniatura.png" />
+    <Content Include="Images\chile-miniatura.png" />
+    <Content Include="Images\fondo-fabrica.jpg" />
+    <Content Include="Images\fondo-login.jpg" />
+    <Content Include="Images\grua-bkg.jpg" />
+    <Content Include="Images\grungeTexture.jpg" />
+    <Content Include="Images\metso-logo-280-png.png" />
+    <Content Include="Images\metso-logo-280.jpg" />
+    <Content Include="Images\metso-logo-footer.png" />
+    <Content Include="Images\metso-logo-white.png" />
+    <Content Include="Images\metso-logo.png" />
+    <Content Include="Images\mill-bkg.jpg" />
+    <Content Include="Images\rounded.png" />
+    <Content Include="Images\Select2\select2-spinner.gif" />
+    <Content Include="Images\Select2\select2.png" />
+    <Content Include="Images\Select2\select2x2.png" />
+    <Content Include="Images\semi-blanco.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
@@ -388,6 +371,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\select2.js" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -427,8 +411,26 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\UserMailer\_Layout.cshtml" />
+    <Content Include="Views\UserMailer\Welcome.cshtml" />
+    <Content Include="Views\UserMailer\EnvioRendicion.cshtml" />
+    <Content Include="Views\RendicionStatus\Index.cshtml" />
+    <Content Include="Views\RendicionStatus\Details.cshtml" />
+    <Content Include="Views\RendicionStatus\Create.cshtml" />
+    <Content Include="Views\RendicionStatus\Edit.cshtml" />
+    <Content Include="Views\RendicionStatus\Delete.cshtml" />
+    <Content Include="Views\Aprobador\Index.cshtml" />
+    <Content Include="Views\Aprobador\Details.cshtml" />
+    <Content Include="Views\Aprobador\Create.cshtml" />
+    <Content Include="Views\Aprobador\Edit.cshtml" />
+    <Content Include="Views\Aprobador\Delete.cshtml" />
+    <Content Include="Views\Shared\_FooterBar.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Rendicion\ExpenseApproval.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -436,17 +438,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201308220517285_InitialCreate.resx">
-      <DependentUpon>201308220517285_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201308220533153_initial.resx">
-      <DependentUpon>201308220533153_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311070540207_errorazure.resx">
-      <DependentUpon>201311070540207_errorazure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311070712475_funcionazure.resx">
-      <DependentUpon>201311070712475_funcionazure.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201311280902179_initial.resx">
+      <DependentUpon>201311280902179_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
